@@ -3,6 +3,7 @@
   /* height: 50%;
   width: 50%; */
 
+  padding: 10rem;
   position: fixed;
   top: 20%;
   bottom: 20%;
@@ -11,4 +12,40 @@
   border-radius: 2rem;
   box-shadow: 0.5rem 0.5rem rgba(50, 50, 50, 0.3);
   pointer-events: all;
+}
+
+.add-label {
+  font-size: 3rem;
+}
+
+.add-big-container {
+  border-color: black;
+  border: 1rem;
+}
+
+.add-small-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.add-buttons-position {
+  display: flex;
+  justify-content: end;
+  padding: 1rem;
+}
+
+.add-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 1rem; */
+}
+
+.add-edit {
+  width: 65%;
+  font-size: xx-large;
+}
+
+.add-text-area {
+  height: 15rem;
 }

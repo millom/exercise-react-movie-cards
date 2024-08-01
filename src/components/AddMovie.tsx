@@ -20,25 +20,81 @@
 
 // export default Modal;
 
+import { FormEventHandler, useRef } from "react";
+import { IReview } from "../interfaces";
+
 import "../css/AddMovie.css";
 
 export interface IAddMovieProps {
+  reviewMap: Map<number, IReview[]>;
+  index: number;
   closeModal: Function;
 }
 
+// export const AddMovie = ({ reviewMap, index, closeModal }: IAddMovieProps) => {
 export const AddMovie = ({ closeModal }: IAddMovieProps) => {
+  const titleRef = useRef<HTMLInputElement>(null);
+  const ratingRef = useRef<HTMLInputElement>(null);
+  const genreRef = useRef<HTMLSelectElement>(null);
+  const desvriptionRef = useRef<HTMLInputElement>(null);
+
+  const resetForm: FormEventHandler<HTMLButtonElement> = (event) => {
+    event.preventDefault();
+    titleRef.current!.value = "";
+    ratingRef.current!.value = "";
+    genreRef.current!.value = "Drama";
+    desvriptionRef.current!.value = "";
+  };
+
   return (
-    <>
-      <div className="add-movie-main">
-        <div>
-          <h2>Modal</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, nisi.
-            Dolorem est esse iste perferendis.
-          </p>
+    <form className="add-movie-main">
+      <div className="add-big-container">
+        <div className="add-small-container">
+          <label className="add-label" htmlFor="titleId">
+            Title:
+          </label>
+          <input id="titleId" className="add-edit" type="text" ref={titleRef} />
         </div>
-        <button onClick={() => closeModal(false)}>Close Modal</button>
+        <div className="add-small-container">
+          <label className="add-label" htmlFor="ratingId">
+            Rating:
+          </label>
+          <input
+            id="ratingId"
+            className="add-edit"
+            type="range"
+            ref={ratingRef}
+          />
+        </div>
+        <div className="add-small-container">
+          <label className="add-label" htmlFor="genreId">
+            Genre:
+          </label>
+          <select id="genreId" className="add-edit" ref={genreRef}>
+            <option>Drama</option>
+            <option>Action</option>
+            <option>Thriller</option>
+            <option>Comedy</option>
+          </select>
+        </div>
+        <div className="add-small-container">
+          <label className="add-label" htmlFor="descriptionIs">
+            Description:
+          </label>
+          <input
+            id="descriptionId"
+            className="add-edit add-text-area"
+            type="textarea"
+            ref={desvriptionRef}
+          />
+        </div>
+        <div className="add-buttons-position">
+          <div className="add-buttons-container">
+            <button onClick={resetForm}>Clear</button>
+            <button onClick={() => closeModal(false)}>Close Modal</button>
+          </div>
+        </div>
       </div>
-    </>
+    </form>
   );
 };
