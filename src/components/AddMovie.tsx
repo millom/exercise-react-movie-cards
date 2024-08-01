@@ -37,14 +37,14 @@ export const AddMovie = ({ closeModal, addReview }: IAddMovieProps) => {
   const titleRef = useRef<HTMLInputElement>(null);
   const ratingRef = useRef<HTMLInputElement>(null);
   const genreRef = useRef<HTMLSelectElement>(null);
-  const desvriptionRef = useRef<HTMLInputElement>(null);
+  const descriptionRef = useRef<HTMLInputElement>(null);
 
   const resetForm: FormEventHandler<HTMLButtonElement> = (event) => {
     event.preventDefault();
     titleRef.current!.value = "";
     ratingRef.current!.value = "";
     genreRef.current!.value = "Drama";
-    desvriptionRef.current!.value = "";
+    descriptionRef.current!.value = "";
   };
 
   const submit: FormEventHandler<HTMLFormElement> = (event) => {
@@ -53,7 +53,7 @@ export const AddMovie = ({ closeModal, addReview }: IAddMovieProps) => {
       id: -1, // Set later
       title: titleRef.current!.value,
       genre: genreRef.current!.value,
-      description: desvriptionRef.current!.value,
+      description: descriptionRef.current!.value,
       rating: parseInt(ratingRef.current!.value),
     };
     console.log(review);
@@ -100,14 +100,18 @@ export const AddMovie = ({ closeModal, addReview }: IAddMovieProps) => {
             id="descriptionId"
             className="add-edit add-text-area"
             type="textarea"
-            ref={desvriptionRef}
+            ref={descriptionRef}
           />
         </div>
         <div className="add-buttons-position">
           <div className="add-buttons-container">
-            <button onClick={resetForm}>Clear</button>
+            <button className="add-button" onClick={resetForm}>
+              Clear
+            </button>
             {/* <button onClick={submit} type="submit"> */}
-            <button type="submit">Submit</button>
+            <button className="add-button" type="submit">
+              Submit
+            </button>
           </div>
         </div>
       </div>

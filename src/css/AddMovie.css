@@ -1,9 +1,9 @@
 .add-movie-main {
-  background-color: blueviolet;
+  background-color: darkseagreen;
   /* height: 50%;
   width: 50%; */
 
-  padding: 10rem;
+  padding: 3rem;
   position: fixed;
   top: 20%;
   bottom: 20%;
@@ -15,37 +15,46 @@
 }
 
 .add-label {
-  font-size: 3rem;
+  font-size: large;
 }
 
 .add-big-container {
   border-color: black;
-  border: 1rem;
+  border: 0.5rem;
 }
 
 .add-small-container {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .add-buttons-position {
   display: flex;
   justify-content: end;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .add-buttons-container {
   display: flex;
   justify-content: space-between;
   /* padding: 1rem; */
+  width: 65%;
 }
 
 .add-edit {
   width: 65%;
-  font-size: xx-large;
+  font-size: large;
 }
 
 .add-text-area {
-  height: 15rem;
+  height: 7rem;
+}
+
+.add-button {
+  height: 2rem;
+  width: 8rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.15rem 0.15rem rgba(50, 50, 50, 0.3);
 }
