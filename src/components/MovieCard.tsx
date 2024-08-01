@@ -3,12 +3,13 @@ import { IReview } from "../interfaces";
 
 export interface IMovieCardProps {
   review: IReview;
+  removeReview: Function;
 }
 
-export const MovieCard = ({ review }: IMovieCardProps) => {
+export const MovieCard = ({ review, removeReview }: IMovieCardProps) => {
   return (
     <>
-      <div className="movie-card-main">
+      <div className="movie-card-main" onClick={() => removeReview(review)}>
         <article className="card-article">
           <div className="card-line">
             <label className="card-text">Title:</label>

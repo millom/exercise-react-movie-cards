@@ -121,9 +121,14 @@ import { MovieCard } from "./MovieCard";
 export interface IMovieListProps {
   reviews: Array<IReview>;
   disabled: boolean;
+  removeReview: Function;
 }
 
-export function MovieList({ disabled, reviews }: IMovieListProps) {
+export function MovieList({
+  disabled,
+  reviews,
+  removeReview,
+}: IMovieListProps) {
   // const array: Array<number> = [];
   // array["0"] = 23;
   // array["1"] = 33;
@@ -140,7 +145,11 @@ export function MovieList({ disabled, reviews }: IMovieListProps) {
   return (
     <div className={disabled ? "container disabled" : "container"}>
       {reviews.map((review) => (
-        <MovieCard key={review.id} review={review} />
+        <MovieCard
+          key={review.id}
+          review={review}
+          removeReview={removeReview}
+        />
       ))}
     </div>
   );

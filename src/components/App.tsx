@@ -14,6 +14,7 @@ import { IReview } from "../interfaces";
 
 import "../css/css-grid.css";
 import "../css/App.css";
+import { render } from "react-dom";
 
 function App() {
   // let initialIndex: number = 0;
@@ -35,10 +36,30 @@ function App() {
     console.log("After:", reviewArray);
   };
 
+  const removeReview = (review: IReview) => {
+    // const index: number = reviewArray.indexOf(review);
+    // reviewArray.splice(index, 1);
+
+    const updatedList = reviewArray.filter((item) => item.id !== review.id);
+    // setItems(updatedList);
+    setReviewArray(updatedList);
+
+    // const updatedList = items.filter((item) => item.id !== id);
+    // setItems(updatedList);
+    console.log("remove", review);
+    console.log(reviewArray);
+    // window.location.reload(false);
+    // MovieList.render();
+  };
+
   return (
     <div className="body">
       <Header showModal={setShow} disabled={showModal} />
-      <MovieList disabled={showModal} reviews={reviewArray} />
+      <MovieList
+        disabled={showModal}
+        reviews={reviewArray}
+        removeReview={removeReview}
+      />
       {showModal && <AddMovie closeModal={setShow} addReview={addReview} />}
     </div>
   );
