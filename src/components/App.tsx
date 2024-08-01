@@ -9,7 +9,7 @@
 // }
 
 import { useState } from "react";
-import { Header, MovieList, Modal } from ".";
+import { Header, MovieList, AddMovie } from ".";
 
 import "../css/css-grid.css";
 import "../css/App.css";
@@ -29,7 +29,7 @@ function App() {
       <Header showModal={setShow} disabled={showModal} />
       <MovieList disabled={showModal} />
       {/* <Modal closeModal={setShow} /> */}
-      {showModal && <Modal closeModal={setShow} />}
+      {showModal && <AddMovie closeModal={setShow} />}
     </div>
   );
 }
