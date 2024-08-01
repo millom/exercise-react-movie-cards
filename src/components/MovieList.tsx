@@ -149,6 +149,7 @@ export function MovieList({
           key={review.id}
           review={review}
           removeReview={removeReview}
+          disabled={disabled}
         />
       ))}
     </div>

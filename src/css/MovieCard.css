@@ -48,3 +48,11 @@
   padding: 1rem;
   border-radius: 2rem;
 }
+
+.card-disabled {
+  pointer-events: none;
+  color: #aaa;
+  background: dimgray;
+  border-style: dashed;
+  border-color: darkslategrey;
+}
