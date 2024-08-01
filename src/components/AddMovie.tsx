@@ -26,13 +26,14 @@ import { IReview } from "../interfaces";
 import "../css/AddMovie.css";
 
 export interface IAddMovieProps {
-  reviewMap: Map<number, IReview[]>;
-  index: number;
+  // addReview: Map<number, IReview>;
+  addReview: Function;
+  // index: number;
   closeModal: Function;
 }
 
 // export const AddMovie = ({ reviewMap, index, closeModal }: IAddMovieProps) => {
-export const AddMovie = ({ closeModal }: IAddMovieProps) => {
+export const AddMovie = ({ closeModal, addReview }: IAddMovieProps) => {
   const titleRef = useRef<HTMLInputElement>(null);
   const ratingRef = useRef<HTMLInputElement>(null);
   const genreRef = useRef<HTMLSelectElement>(null);
@@ -46,8 +47,22 @@ export const AddMovie = ({ closeModal }: IAddMovieProps) => {
     desvriptionRef.current!.value = "";
   };
 
+  const submit: FormEventHandler<HTMLFormElement> = (event) => {
+    event.preventDefault();
+    const review: IReview = {
+      id: -1, // Set later
+      title: titleRef.current!.value,
+      genre: genreRef.current!.value,
+      description: desvriptionRef.current!.value,
+      rating: parseInt(ratingRef.current!.value),
+    };
+    console.log(review);
+    addReview(review);
+    closeModal(false);
+  };
+
   return (
-    <form className="add-movie-main">
+    <form className="add-movie-main" onSubmit={submit}>
       <div className="add-big-container">
         <div className="add-small-container">
           <label className="add-label" htmlFor="titleId">
@@ -91,7 +106,8 @@ export const AddMovie = ({ closeModal }: IAddMovieProps) => {
         <div className="add-buttons-position">
           <div className="add-buttons-container">
             <button onClick={resetForm}>Clear</button>
-            <button onClick={() => closeModal(false)}>Close Modal</button>
+            {/* <button onClick={submit} type="submit"> */}
+            <button type="submit">Submit</button>
           </div>
         </div>
       </div>
