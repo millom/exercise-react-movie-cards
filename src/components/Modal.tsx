@@ -1,12 +1,13 @@
 // import React from "react";
 // import styles from "./modal.module.css";
 
-import { MouseEventHandler } from "react";
+// import { MouseEventHandler } from "react";
 
 import "../css/Modal.css";
 
 export interface IModalProps {
-  closeModal: MouseEventHandler<HTMLButtonElement>;
+  // closeModal: MouseEventHandler<HTMLButtonElement>;
+  closeModal: Function;
 }
 
 export const Modal = ({ closeModal }: IModalProps) => {
@@ -23,7 +24,7 @@ export const Modal = ({ closeModal }: IModalProps) => {
           </p>
         </div>
         {/* <button onClick={closeModal} className={styles.modal__closeBtn}> */}
-        <button onClick={closeModal}>Close Modal</button>
+        <button onClick={() => closeModal(false)}>Close Modal</button>
       </div>
     </div>
   );
