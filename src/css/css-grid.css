@@ -5,7 +5,7 @@
 .body {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 8% auto;
+  grid-template-rows: 12% auto;
 }
 
 .header {

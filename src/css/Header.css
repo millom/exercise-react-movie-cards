@@ -1,9 +1,39 @@
 .header {
-  background-color: blueviolet;
+  background-color: cadetblue;
+  border-style: solid;
+  border-color: chocolate;
+  border-width: 0 0 0.2rem 0;
+}
+
+.header-layout {
+  display: flex;
+  justify-content: space-between;
+  width: 25rem;
+}
+
+.header-button {
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.15rem 0.15rem rgba(50, 50, 50, 0.3);
+}
+
+.header-text {
+  font-size: 2rem;
 }
 
 .disabled {
   pointer-events: none;
   color: #aaa;
-  background: #f5f5f5;
+  background: dimgray;
 }
+
+.header-button-disabled {
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  color: #aaa;
+  background: dimgray;
+  box-shadow: 0rem 0rem rgba(50, 50, 50, 0.3);
+}
+
+/* @media screen and (max-width: 1200px) {
+} */

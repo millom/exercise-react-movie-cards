@@ -9,10 +9,15 @@ export interface IHeaderProps {
 export function Header({ showModal, disabled }: IHeaderProps) {
   return (
     <div className={disabled ? "header disabled" : "header"}>
-      <h1 className="header-text">Movie review list</h1>
-      <button className="header-button" onClick={() => showModal(true)}>
-        Add Movie
-      </button>
+      <div className="header-layout">
+        <h1 className="header-text">Movie review list</h1>
+        <button
+          className={disabled ? "header-button-disabled" : "header-button"}
+          onClick={() => showModal(true)}
+        >
+          Add Review
+        </button>
+      </div>
     </div>
   );
 }
