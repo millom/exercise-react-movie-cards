@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 8% auto;
+}
+
+.header {
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+
+  /* height: 10%; */
+  /* position: fixed;
+  left: 0%;
+  top: 0%;
+  right: 0%; */
+
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
