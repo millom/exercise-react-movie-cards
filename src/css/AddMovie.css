@@ -3,12 +3,12 @@
   /* height: 50%;
   width: 50%; */
 
-  padding: 3rem;
+  padding: 1rem;
   position: fixed;
-  top: 20%;
-  bottom: 20%;
-  left: 20%;
-  right: 20%;
+  top: 12%;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
   border-radius: 2rem;
   box-shadow: 0.5rem 0.5rem rgba(50, 50, 50, 0.3);
   pointer-events: all;
@@ -48,13 +48,13 @@
 }
 
 .add-text-area {
-  height: 7rem;
+  height: 5rem;
 }
 
 .add-button {
   height: 2rem;
   width: 8rem;
-  font-size: 1.5rem;
+  font-size: large;
   border-radius: 0.5rem;
   box-shadow: 0.15rem 0.15rem rgba(50, 50, 50, 0.3);
 }
