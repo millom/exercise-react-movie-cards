@@ -121,6 +121,19 @@ export interface IMovieListProps {
 }
 
 export function MovieList({ disabled }: IMovieListProps) {
+  // const array: Array<number> = [];
+  // array["0"] = 23;
+  // array["1"] = 33;
+  // array["2"] = 34;
+  // array["3"] = 36;
+  // console.log(array.find((val) => val == 23));
+  // console.log(array);
+  // // delete array["1"];
+  // // delete array["2"];
+  // array.splice(array.indexOf(33), 1);
+
+  // console.log(array);
+
   return <div className={disabled ? "container disabled" : "container"}></div>;
 }
 
