@@ -1,21 +1,32 @@
 import "../css/MovieCard.css";
+import { IReview } from "../interfaces";
 
 export interface IMovieCardProps {
-  closeModal: Function;
+  review: IReview;
 }
 
-export const MovieCard = ({ closeModal }: IMovieCardProps) => {
+export const MovieCard = ({ review }: IMovieCardProps) => {
   return (
     <>
       <div className="movie-card-main">
-        <div>
-          <h2>Modal</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, nisi.
-            Dolorem est esse iste perferendis.
-          </p>
-        </div>
-        <button onClick={() => closeModal(false)}>Close Modal</button>
+        <article className="card-article">
+          <div className="card-line">
+            <label className="card-text">Title:</label>
+            <p className="card-text">{review.title}</p>
+          </div>
+          <div className="card-line">
+            <label className="card-text">Genre:</label>
+            <p className="card-text">{review.genre}</p>
+          </div>
+          <div className="card-line">
+            <label className="card-text">Rating:</label>
+            <p className="card-text">{review.rating}</p>
+          </div>
+          <div className="card-big-line">
+            <label className="card-text">Description:</label>
+            <p className="card-text card-textarea">{review.description}</p>
+          </div>
+        </article>
       </div>
     </>
   );

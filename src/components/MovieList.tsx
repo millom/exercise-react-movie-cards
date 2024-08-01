@@ -113,14 +113,17 @@
 
 // export default MovieList;
 // import { useState } from "react";
+import { IReview } from "../interfaces";
 
 import "../css/MovieList.css";
+import { MovieCard } from "./MovieCard";
 
 export interface IMovieListProps {
+  reviews: Array<IReview>;
   disabled: boolean;
 }
 
-export function MovieList({ disabled }: IMovieListProps) {
+export function MovieList({ disabled, reviews }: IMovieListProps) {
   // const array: Array<number> = [];
   // array["0"] = 23;
   // array["1"] = 33;
@@ -134,7 +137,13 @@ export function MovieList({ disabled }: IMovieListProps) {
 
   // console.log(array);
 
-  return <div className={disabled ? "container disabled" : "container"}></div>;
+  return (
+    <div className={disabled ? "container disabled" : "container"}>
+      {reviews.map((review) => (
+        <MovieCard key={review.id} review={review} />
+      ))}
+    </div>
+  );
 }
 
 // {

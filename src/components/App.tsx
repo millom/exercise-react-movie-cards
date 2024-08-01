@@ -18,7 +18,7 @@ import "../css/App.css";
 function App() {
   // let initialIndex: number = 0;
   const reviewArrayDefault: Array<IReview> = new Array();
-  // const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0);
   const [reviewArray, setReviewArray] = useState(reviewArrayDefault);
   const [showModal, setShowModal] = useState(false);
 
@@ -28,17 +28,17 @@ function App() {
 
   const addReview = (review: IReview) => {
     console.log("Before:", reviewArray);
-    // review.id = index;
+    review.id = index;
     reviewArray.push(review);
     setReviewArray(reviewArray);
-    // setIndex(index + 1);
+    setIndex(index + 1);
     console.log("After:", reviewArray);
   };
 
   return (
     <div className="body">
       <Header showModal={setShow} disabled={showModal} />
-      <MovieList disabled={showModal} />
+      <MovieList disabled={showModal} reviews={reviewArray} />
       {showModal && <AddMovie closeModal={setShow} addReview={addReview} />}
     </div>
   );
