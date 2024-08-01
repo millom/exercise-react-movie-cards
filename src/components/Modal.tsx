@@ -14,7 +14,7 @@ export const Modal = ({ closeModal }: IModalProps) => {
   return (
     // <div onClick={closeModal} className={styles.modalBack}>
     //     <div className={styles.modalContainer}>
-    <div>
+    <>
       <div className="modal-main">
         <div>
           <h2>Modal</h2>
@@ -26,6 +26,6 @@ export const Modal = ({ closeModal }: IModalProps) => {
         {/* <button onClick={closeModal} className={styles.modal__closeBtn}> */}
         <button onClick={() => closeModal(false)}>Close Modal</button>
       </div>
-    </div>
+    </>
   );
 };
