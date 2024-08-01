@@ -18,9 +18,6 @@ function App() {
   const [showModal, setShowModal] = useState(false);
 
   const setShow = (show: boolean) => {
-    // show
-    //   ? document.querySelector(".container")?.classList.add("disabled")
-    //   : document.querySelector(".container")?.classList.remove("disabled");
     setShowModal(show);
   };
 
@@ -28,22 +25,9 @@ function App() {
     <div className="body">
       <Header showModal={setShow} disabled={showModal} />
       <MovieList disabled={showModal} />
-      {/* <Modal closeModal={setShow} /> */}
       {showModal && <AddMovie closeModal={setShow} />}
     </div>
   );
 }
-// {showModal && <Modal closeModal={() => showModal1(false)} />}
 
 export default App;
-
-// import { Modal } from ".";
-
-// const [showModal, setShowModal] = useState(false);
-
-// const showModal1 = (show: boolean) => {
-//   show
-//     ? document.querySelector(".container")?.classList.add("disabled")
-//     : document.querySelector(".container")?.classList.remove("disabled");
-//   setShowModal(show);
-// };
