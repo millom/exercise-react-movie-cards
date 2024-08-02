@@ -1,10 +1,11 @@
 import "../css/MovieCard.css";
 import { IReview } from "../interfaces";
+import { ReviewFunction } from "../custom-types";
 
 export interface IMovieCardProps {
   review: IReview;
   disabled: boolean;
-  removeReview: Function;
+  removeReview: ReviewFunction;
 }
 
 export const MovieCard = ({

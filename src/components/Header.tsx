@@ -1,8 +1,9 @@
 import "../css/css-grid.css";
 import "../css/Header.css";
+import { ModalFunction } from "../custom-types";
 
 export interface IHeaderProps {
-  showModal: Function;
+  showModal: ModalFunction;
   disabled: boolean;
 }
 

@@ -1,12 +1,13 @@
 import { IReview } from "../interfaces";
 import { MovieCard } from "./MovieCard";
+import { ReviewFunction } from "../custom-types";
 
 import "../css/MovieList.css";
 
 export interface IMovieListProps {
   reviews: Array<IReview>;
   disabled: boolean;
-  removeReview: Function;
+  removeReview: ReviewFunction;
 }
 
 export function MovieList({

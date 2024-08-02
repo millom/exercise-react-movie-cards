@@ -1,11 +1,12 @@
 import { FormEventHandler, useRef } from "react";
 import { IReview } from "../interfaces";
+import { ReviewFunction, ModalFunction } from "../custom-types";
 
 import "../css/AddMovie.css";
 
 export interface IAddMovieProps {
-  addReview: Function;
-  closeModal: Function;
+  addReview: ReviewFunction;
+  closeModal: ModalFunction;
 }
 
 export const AddMovie = ({ closeModal, addReview }: IAddMovieProps) => {
