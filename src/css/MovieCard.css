@@ -1,9 +1,7 @@
 .movie-card-main {
   background-color: cadetblue;
-  /* height: 50%;
-  width: 50%; */
-  width: 16rem; /*36rem;*/
-  height: 9.5rem; /*32rem;*/
+  width: 16rem;
+  height: 9.5rem;
 
   border-radius: 1rem;
   padding: 1rem;
@@ -19,31 +17,22 @@
 .card-line {
   display: flex;
   justify-content: space-between;
-  width: 16rem; /*32rem;*/
+  width: 16rem;
 }
 
 .card-text {
   font-size: large;
-  /* text-wrap: wrap; */
 }
 
 .card-big-line {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  /* height: 12rem; */
-  /* width: %; */
-  /* text-wrap: wrap; */
-  /* border-color: black;
-  border: 1rem; */
 }
 
 .card-textarea {
   background-color: whitesmoke;
   text-wrap: wrap;
-  /* width: 31rem;
-  height: 15rem;
-  max-width: 34rem; */
   width: 15rem;
   height: 5rem;
   max-width: 15rem;
@@ -54,8 +43,4 @@
 
 .card-disabled {
   pointer-events: none;
-  /* color: #aaa;
-  background: dimgray;
-  border-style: dashed;
-  border-color: darkslategrey; */
 }

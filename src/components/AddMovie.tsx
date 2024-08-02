@@ -1,38 +1,13 @@
-// {
-/* <dialog id="modal" class="modal">
-  <button id="closeModal" class="modal-close-btn">Close</button>
-  <p>...</p>
-  <!-- Add more elements as needed -->
-</dialog> */
-// }
-
-// import React, { useRef } from "react";
-
-// const Modal: React.FC = () => {
-//   const modalRef = useRef<HTMLDialogElement | null>(null);
-
-//   return (
-//     <dialog ref={modalRef} className="modal">
-//       {/* {children} */}
-//     </dialog>
-//   );
-// };
-
-// export default Modal;
-
 import { FormEventHandler, useRef } from "react";
 import { IReview } from "../interfaces";
 
 import "../css/AddMovie.css";
 
 export interface IAddMovieProps {
-  // addReview: Map<number, IReview>;
   addReview: Function;
-  // index: number;
   closeModal: Function;
 }
 
-// export const AddMovie = ({ reviewMap, index, closeModal }: IAddMovieProps) => {
 export const AddMovie = ({ closeModal, addReview }: IAddMovieProps) => {
   const titleRef = useRef<HTMLInputElement>(null);
   const ratingRef = useRef<HTMLInputElement>(null);
@@ -108,7 +83,6 @@ export const AddMovie = ({ closeModal, addReview }: IAddMovieProps) => {
             <button className="add-button" onClick={resetForm}>
               Clear
             </button>
-            {/* <button onClick={submit} type="submit"> */}
             <button className="add-button" type="submit">
               Submit
             </button>
