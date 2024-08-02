@@ -12,7 +12,8 @@ export const AddMovie = ({ closeModal, addReview }: IAddMovieProps) => {
   const titleRef = useRef<HTMLInputElement>(null);
   const ratingRef = useRef<HTMLInputElement>(null);
   const genreRef = useRef<HTMLSelectElement>(null);
-  const descriptionRef = useRef<HTMLInputElement>(null);
+  // const descriptionRef = useRef<HTMLInputElement>(null);
+  const descriptionRef = useRef<HTMLTextAreaElement>(null);
 
   const resetForm: FormEventHandler<HTMLButtonElement> = (event) => {
     event.preventDefault();
@@ -71,10 +72,15 @@ export const AddMovie = ({ closeModal, addReview }: IAddMovieProps) => {
           <label className="add-label" htmlFor="descriptionIs">
             Description:
           </label>
-          <input
+          {/* <input
             id="descriptionId"
             className="add-edit add-text-area"
             type="textarea"
+            ref={descriptionRef}
+          /> */}
+          <textarea
+            id="descriptionId"
+            className="add-edit add-text-area"
             ref={descriptionRef}
           />
         </div>

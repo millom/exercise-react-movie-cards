@@ -29,7 +29,9 @@ export const MovieCard = ({
             <p className="card-text">{review.genre}</p>
           </div>
           <div className="card-big-line">
-            <p className="card-text card-textarea">{review.description}</p>
+            <textarea className="card-text card-textarea">
+              {review.description}
+            </textarea>
           </div>
         </article>
       </div>

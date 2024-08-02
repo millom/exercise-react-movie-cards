@@ -2,3 +2,19 @@ body {
   background-color: aqua;
   height: 100vh;
 }
+
+input {
+  padding: 0.5rem;
+}
+
+select {
+  padding: 0.5rem;
+}
+
+/* input, */
+textarea {
+  /* cursor:  */
+  cursor: row-resize;
+  text-wrap: wrap;
+  word-wrap: normal;
+}
