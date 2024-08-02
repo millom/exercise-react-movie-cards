@@ -22,19 +22,13 @@ export const MovieCard = ({
       >
         <article className="card-article">
           <div className="card-line">
-            <label className="card-text">Title:</label>
             <p className="card-text">{review.title}</p>
+            <p className="card-text">{review.rating}/100</p>
           </div>
           <div className="card-line">
-            <label className="card-text">Genre:</label>
             <p className="card-text">{review.genre}</p>
           </div>
-          <div className="card-line">
-            <label className="card-text">Rating:</label>
-            <p className="card-text">{review.rating}</p>
-          </div>
           <div className="card-big-line">
-            <label className="card-text">Description:</label>
             <p className="card-text card-textarea">{review.description}</p>
           </div>
         </article>
