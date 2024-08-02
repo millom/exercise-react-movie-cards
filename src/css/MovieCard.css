@@ -54,8 +54,8 @@
 
 .card-disabled {
   pointer-events: none;
-  color: #aaa;
+  /* color: #aaa;
   background: dimgray;
   border-style: dashed;
-  border-color: darkslategrey;
+  border-color: darkslategrey; */
 }
